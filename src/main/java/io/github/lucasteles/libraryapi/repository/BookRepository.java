@@ -1,2 +1,9 @@
-package io.github.lucasteles.libraryapi.repository;public class BookRepository {
+package io.github.lucasteles.libraryapi.repository;
+
+import io.github.lucasteles.libraryapi.model.Book;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.UUID;
+
+public interface BookRepository extends JpaRepository<Book, UUID> {
 }

@@ -22,7 +22,8 @@ public class Author {
     private LocalDate dateOfBirth;
     @Column(name = "nacionalidade", length = 50, nullable = false)
     private String nationality;
-    @OneToMany(mappedBy = "idAuthor")
+
+    @OneToMany(mappedBy = "author", fetch = FetchType.EAGER)
     private List<Book> books;
 
     public Author() {

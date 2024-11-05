@@ -26,9 +26,9 @@ public class Book {
     private BookGender gender;
     @Column(name = "preco", precision = 18, scale = 2)
     private BigDecimal price;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_autor")
-    private Author idAuthor;
+    private Author author;
 
     public Book() {
     }
